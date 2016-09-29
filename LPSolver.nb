@@ -1,0 +1,507 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     22756,        498]
+NotebookOptionsPosition[     22423,        481]
+NotebookOutlinePosition[     22778,        497]
+CellTagsIndexPosition[     22735,        494]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"ContourPlot", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"x1", "*", "x"}], "+", " ", 
+           RowBox[{"y1", "*", "y"}]}], " ", "\[Equal]", " ", "z1"}], "}"}], 
+        ",", " ", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "5"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"y", ",", "0", ",", "5"}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"ContourStyle", "\[Rule]", 
+         RowBox[{"Directive", "[", "Blue", "]"}]}]}], "\[IndentingNewLine]", 
+       "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"ContourPlot", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"x2", "*", "x"}], "+", " ", 
+           RowBox[{"y2", "*", "y"}]}], " ", "\[Equal]", " ", "z2"}], "}"}], 
+        ",", " ", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "5"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"y", ",", "0", ",", "5"}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"ContourStyle", "\[Rule]", 
+         RowBox[{"Directive", "[", "Green", "]"}]}]}], "\[IndentingNewLine]", 
+       "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"ContourPlot", "[", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"x3", "*", "x"}], "+", " ", 
+           RowBox[{"y3", "*", "y"}]}], " ", "\[Equal]", " ", "z3"}], "}"}], 
+        ",", " ", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"x", ",", "0", ",", "5"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{"y", ",", "0", ",", "5"}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"ContourStyle", "\[Rule]", 
+         RowBox[{"Directive", "[", "Red", "]"}]}]}], "\[IndentingNewLine]", 
+       "]"}], ",", "\[IndentingNewLine]", " ", 
+      RowBox[{"Graphics", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"PointSize", "[", "Large", "]"}], ",", " ", "Black", ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"type", " ", "===", "\"\<Maximize\>\""}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{"Point", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"x", ",", "y"}], "}"}], "/.", 
+             RowBox[{"Last", "[", "\[IndentingNewLine]", 
+              RowBox[{"NMaximize", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"objx", "*", "x"}], " ", "+", " ", 
+                   RowBox[{"objy", "*", "y"}]}], ",", " ", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"x1", "*", "x"}], "+", " ", 
+                    RowBox[{"y1", "*", "y"}]}], " ", "\[LessEqual]", "z1"}], 
+                  ",", "\[IndentingNewLine]", " ", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"x2", "*", "x"}], " ", "+", " ", 
+                    RowBox[{"y2", "*", "y"}]}], " ", "\[LessEqual]", " ", 
+                   "z2"}], ",", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"x3", "*", "x"}], " ", "+", " ", 
+                    RowBox[{"y3", "*", "y"}]}], " ", "\[LessEqual]", " ", 
+                   "z3"}], ",", " ", 
+                  RowBox[{"x", "\[GreaterEqual]", "0"}], ",", " ", 
+                  RowBox[{"y", " ", "\[GreaterEqual]", " ", "0"}]}], "}"}], 
+                ",", " ", 
+                RowBox[{"{", 
+                 RowBox[{"x", ",", "y"}], "}"}]}], "]"}], 
+              "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}], 
+           ",", "\[IndentingNewLine]", 
+           RowBox[{"Point", "[", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"x", ",", "y"}], "}"}], "/.", 
+             RowBox[{"Last", "[", "\[IndentingNewLine]", 
+              RowBox[{"NMinimize", "[", 
+               RowBox[{
+                RowBox[{"{", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"objx", "*", "x"}], " ", "+", " ", 
+                   RowBox[{"objy", "*", "y"}]}], ",", " ", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"x1", "*", "x"}], "+", " ", 
+                    RowBox[{"y1", "*", "y"}]}], " ", "\[GreaterEqual]", 
+                   "z1"}], ",", " ", "\[IndentingNewLine]", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"x2", "*", "x"}], " ", "+", " ", 
+                    RowBox[{"y2", "*", "y"}]}], " ", "\[GreaterEqual]", " ", 
+                   "z2"}], ",", " ", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"x3", "*", "x"}], " ", "+", " ", 
+                    RowBox[{"y3", "*", "y"}]}], " ", "\[GreaterEqual]", 
+                   "z3"}], ",", " ", 
+                  RowBox[{"x", "\[GreaterEqual]", "0"}], ",", " ", 
+                  RowBox[{"y", "\[GreaterEqual]", "0"}]}], "}"}], ",", " ", 
+                RowBox[{"{", 
+                 RowBox[{"x", ",", "y"}], "}"}]}], "]"}], 
+              "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]}], 
+          "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"type", " ", "===", "\"\<Maximize\>\""}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"RegionPlot", "[", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"x1", "*", "x"}], "+", " ", 
+             RowBox[{"y1", "*", "y"}]}], " ", "\[LessEqual]", "z1"}], " ", "&&",
+            "\[IndentingNewLine]", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"x2", "*", "x"}], " ", "+", " ", 
+             RowBox[{"y2", "*", "y"}]}], " ", "\[LessEqual]", " ", "z2"}], "&&", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"x3", "*", "x"}], " ", "+", " ", 
+             RowBox[{"y3", "*", "y"}]}], " ", "\[LessEqual]", " ", "z3"}], "&&",
+            " ", 
+           RowBox[{"x", "\[GreaterEqual]", "0"}], " ", "&&", 
+           RowBox[{"y", " ", "\[GreaterEqual]", " ", "0"}]}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "0", ",", "5"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"y", ",", "0", ",", "5"}], "}"}]}], "]"}], ",", 
+        "\[IndentingNewLine]", 
+        RowBox[{"RegionPlot", "[", " ", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"x1", "*", "x"}], "+", " ", 
+             RowBox[{"y1", "*", "y"}]}], " ", "\[GreaterEqual]", "z1"}], " ", 
+           "&&", "\[IndentingNewLine]", " ", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"x2", "*", "x"}], " ", "+", " ", 
+             RowBox[{"y2", "*", "y"}]}], " ", "\[GreaterEqual]", " ", "z2"}], 
+           "&&", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"x3", "*", "x"}], " ", "+", " ", 
+             RowBox[{"y3", "*", "y"}]}], " ", "\[GreaterEqual]", " ", "z3"}], 
+           "&&", " ", 
+           RowBox[{"x", "\[GreaterEqual]", "0"}], " ", "&&", 
+           RowBox[{"y", " ", "\[GreaterEqual]", " ", "0"}]}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"x", ",", "0", ",", "5"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{"y", ",", "0", ",", "5"}], "}"}]}], "]"}], ","}], 
+       "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"type", ",", " ", "\"\<Maximize\>\"", ",", 
+       RowBox[{"Style", "[", 
+        RowBox[{"\"\<Type\>\"", ",", " ", "12", ",", " ", "Bold"}], "]"}]}], 
+      "}"}], ",", " ", 
+     RowBox[{"{", 
+      RowBox[{"\"\<Minimize\>\"", ",", " ", "\"\<Maximize\>\""}], "}"}]}], 
+    "}"}], ",", "\[IndentingNewLine]", "Delimiter", ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Style", "[", 
+    RowBox[{"\"\<Constraint 1 (Blue)\>\"", ",", "12", ",", "Bold"}], "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x1", ",", "1", ",", " ", "\"\<x\>\""}], "}"}], ",", " ", 
+     RowBox[{"-", "50"}], ",", "50", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"y1", ",", "0", ",", " ", "\"\<y\>\""}], "}"}], ",", 
+     RowBox[{"-", "50"}], ",", "50", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"z1", ",", "2", ",", " ", "\"\<b\>\""}], "}"}], ",", "0", ",", 
+     "100", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+   RowBox[{"Style", "[", 
+    RowBox[{"\"\<Constraint 2 (Green)\>\"", ",", "12", ",", "Bold"}], "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x2", ",", "0", ",", " ", "\"\<x\>\""}], "}"}], ",", " ", 
+     RowBox[{"-", "50"}], ",", "50", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"y2", ",", "1", ",", " ", "\"\<y\>\""}], "}"}], ",", " ", 
+     RowBox[{"-", "50"}], ",", "50", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", " ", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"z2", ",", "3", ",", " ", "\"\<b\>\""}], "}"}], ",", " ", "0", 
+     ",", " ", "100", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+   RowBox[{"Style", "[", 
+    RowBox[{"\"\<Constraint 3 (Red)\>\"", ",", "12", ",", "Bold"}], "]"}], 
+   ",", "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"x3", ",", "1", ",", " ", "\"\<x\>\""}], "}"}], ",", " ", 
+     RowBox[{"-", "50"}], ",", "50", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"y3", ",", "1", ",", " ", "\"\<y\>\""}], "}"}], ",", " ", 
+     RowBox[{"-", "50"}], ",", "50", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", " ", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"z3", ",", "4", ",", " ", "\"\<b\>\""}], "}"}], ",", " ", "0", 
+     ",", " ", "100", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", "Delimiter", ",", "\[IndentingNewLine]", 
+   RowBox[{"Style", "[", 
+    RowBox[{"\"\<Objective\>\"", ",", "12", ",", "Bold"}], "]"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"objx", ",", "1", ",", " ", "\"\<x\>\""}], "}"}], ",", " ", 
+     RowBox[{"-", "50"}], ",", " ", "50", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"objy", ",", "6", ",", " ", "\"\<y\>\""}], "}"}], ",", " ", 
+     RowBox[{"-", "50"}], ",", " ", "50", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.614125333272264*^9, 3.614125408130291*^9}, {
+   3.614125542682706*^9, 3.614125693427073*^9}, {3.614129705236611*^9, 
+   3.6141297817308397`*^9}, {3.614129871680607*^9, 3.61412988768788*^9}, {
+   3.6141306674242573`*^9, 3.614130820445766*^9}, {3.614131785024328*^9, 
+   3.614131794471616*^9}, {3.614131962716256*^9, 3.614132105424293*^9}, {
+   3.614132386768882*^9, 3.614132597142682*^9}, {3.614132722738603*^9, 
+   3.6141327436270227`*^9}, {3.6141327781939163`*^9, 3.614132843079461*^9}, {
+   3.614132991221373*^9, 3.614132994515913*^9}, {3.6141330870579987`*^9, 
+   3.6141330911381598`*^9}, {3.614133839823394*^9, 3.614133874797216*^9}, {
+   3.6141341162887897`*^9, 3.614134166863151*^9}, {3.614134267180646*^9, 
+   3.614134271163323*^9}, {3.6141357250549917`*^9, 3.614135752020982*^9}, {
+   3.614195979691557*^9, 3.614196099961013*^9}, {3.614196332170632*^9, 
+   3.6141964044628468`*^9}, {3.614196441320327*^9, 3.614196595882978*^9}, {
+   3.614196742202381*^9, 3.614196891671619*^9}, 3.61419698577314*^9, {
+   3.614197108235777*^9, 3.614197163007715*^9}, {3.614222431808484*^9, 
+   3.614222455332934*^9}, {3.614222486419976*^9, 3.614222524187788*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`objx$$ = 1, $CellContext`objy$$ = 
+    6, $CellContext`type$$ = "Maximize", $CellContext`x1$$ = 
+    1, $CellContext`x2$$ = 0, $CellContext`x3$$ = 1, $CellContext`y1$$ = 
+    0, $CellContext`y2$$ = 1, $CellContext`y3$$ = 1, $CellContext`z1$$ = 
+    2, $CellContext`z2$$ = 3, $CellContext`z3$$ = 4, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`type$$], "Maximize", 
+       Style["Type", 12, Bold]}, {"Minimize", "Maximize"}}, {
+      Hold[
+       Style["Constraint 1 (Blue)", 12, Bold]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`x1$$], 1, "x"}, -50, 50}, {{
+       Hold[$CellContext`y1$$], 0, "y"}, -50, 50}, {{
+       Hold[$CellContext`z1$$], 2, "b"}, 0, 100}, {
+      Hold[
+       Style["Constraint 2 (Green)", 12, Bold]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`x2$$], 0, "x"}, -50, 50}, {{
+       Hold[$CellContext`y2$$], 1, "y"}, -50, 50}, {{
+       Hold[$CellContext`z2$$], 3, "b"}, 0, 100}, {
+      Hold[
+       Style["Constraint 3 (Red)", 12, Bold]], 
+      Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`x3$$], 1, "x"}, -50, 50}, {{
+       Hold[$CellContext`y3$$], 1, "y"}, -50, 50}, {{
+       Hold[$CellContext`z3$$], 4, "b"}, 0, 100}, {
+      Hold[
+       Style["Objective", 12, Bold]], Manipulate`Dump`ThisIsNotAControl}, {{
+       Hold[$CellContext`objx$$], 1, "x"}, -50, 50}, {{
+       Hold[$CellContext`objy$$], 6, "y"}, -50, 50}}, Typeset`size$$ = {
+    360., {181., 186.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`type$5118$$ = 
+    False, $CellContext`x1$5119$$ = 0, $CellContext`y1$5120$$ = 
+    0, $CellContext`z1$5121$$ = 0, $CellContext`x2$5122$$ = 
+    0, $CellContext`y2$5123$$ = 0, $CellContext`z2$5124$$ = 
+    0, $CellContext`x3$5125$$ = 0, $CellContext`y3$5126$$ = 
+    0, $CellContext`z3$5127$$ = 0, $CellContext`objx$5128$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`objx$$ = 1, $CellContext`objy$$ = 
+        6, $CellContext`type$$ = "Maximize", $CellContext`x1$$ = 
+        1, $CellContext`x2$$ = 0, $CellContext`x3$$ = 1, $CellContext`y1$$ = 
+        0, $CellContext`y2$$ = 1, $CellContext`y3$$ = 1, $CellContext`z1$$ = 
+        2, $CellContext`z2$$ = 3, $CellContext`z3$$ = 4}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`type$$, $CellContext`type$5118$$, False], 
+        Hold[$CellContext`x1$$, $CellContext`x1$5119$$, 0], 
+        Hold[$CellContext`y1$$, $CellContext`y1$5120$$, 0], 
+        Hold[$CellContext`z1$$, $CellContext`z1$5121$$, 0], 
+        Hold[$CellContext`x2$$, $CellContext`x2$5122$$, 0], 
+        Hold[$CellContext`y2$$, $CellContext`y2$5123$$, 0], 
+        Hold[$CellContext`z2$$, $CellContext`z2$5124$$, 0], 
+        Hold[$CellContext`x3$$, $CellContext`x3$5125$$, 0], 
+        Hold[$CellContext`y3$$, $CellContext`y3$5126$$, 0], 
+        Hold[$CellContext`z3$$, $CellContext`z3$5127$$, 0], 
+        Hold[$CellContext`objx$$, $CellContext`objx$5128$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[{
+         ContourPlot[{$CellContext`x1$$ $CellContext`x + $CellContext`y1$$ \
+$CellContext`y == $CellContext`z1$$}, {$CellContext`x, 0, 5}, {$CellContext`y,
+            0, 5}, ContourStyle -> Directive[Blue]], 
+         ContourPlot[{$CellContext`x2$$ $CellContext`x + $CellContext`y2$$ \
+$CellContext`y == $CellContext`z2$$}, {$CellContext`x, 0, 5}, {$CellContext`y,
+            0, 5}, ContourStyle -> Directive[Green]], 
+         ContourPlot[{$CellContext`x3$$ $CellContext`x + $CellContext`y3$$ \
+$CellContext`y == $CellContext`z3$$}, {$CellContext`x, 0, 5}, {$CellContext`y,
+            0, 5}, ContourStyle -> Directive[Red]], 
+         Graphics[{
+           PointSize[Large], Black, 
+           If[$CellContext`type$$ === "Maximize", 
+            Point[
+             ReplaceAll[{$CellContext`x, $CellContext`y}, 
+              Last[
+               
+               NMaximize[{$CellContext`objx$$ $CellContext`x + \
+$CellContext`objy$$ $CellContext`y, $CellContext`x1$$ $CellContext`x + \
+$CellContext`y1$$ $CellContext`y <= $CellContext`z1$$, $CellContext`x2$$ \
+$CellContext`x + $CellContext`y2$$ $CellContext`y <= $CellContext`z2$$, \
+$CellContext`x3$$ $CellContext`x + $CellContext`y3$$ $CellContext`y <= \
+$CellContext`z3$$, $CellContext`x >= 0, $CellContext`y >= 
+                 0}, {$CellContext`x, $CellContext`y}]]]], 
+            Point[
+             ReplaceAll[{$CellContext`x, $CellContext`y}, 
+              Last[
+               
+               NMinimize[{$CellContext`objx$$ $CellContext`x + \
+$CellContext`objy$$ $CellContext`y, $CellContext`x1$$ $CellContext`x + \
+$CellContext`y1$$ $CellContext`y >= $CellContext`z1$$, $CellContext`x2$$ \
+$CellContext`x + $CellContext`y2$$ $CellContext`y >= $CellContext`z2$$, \
+$CellContext`x3$$ $CellContext`x + $CellContext`y3$$ $CellContext`y >= \
+$CellContext`z3$$, $CellContext`x >= 0, $CellContext`y >= 
+                 0}, {$CellContext`x, $CellContext`y}]]]]]}], 
+         If[$CellContext`type$$ === "Maximize", 
+          RegionPlot[
+           
+           And[$CellContext`x1$$ $CellContext`x + $CellContext`y1$$ \
+$CellContext`y <= $CellContext`z1$$, $CellContext`x2$$ $CellContext`x + \
+$CellContext`y2$$ $CellContext`y <= $CellContext`z2$$, $CellContext`x3$$ \
+$CellContext`x + $CellContext`y3$$ $CellContext`y <= $CellContext`z3$$, \
+$CellContext`x >= 0, $CellContext`y >= 0], {$CellContext`x, 0, 
+            5}, {$CellContext`y, 0, 5}], 
+          RegionPlot[
+           
+           And[$CellContext`x1$$ $CellContext`x + $CellContext`y1$$ \
+$CellContext`y >= $CellContext`z1$$, $CellContext`x2$$ $CellContext`x + \
+$CellContext`y2$$ $CellContext`y >= $CellContext`z2$$, $CellContext`x3$$ \
+$CellContext`x + $CellContext`y3$$ $CellContext`y >= $CellContext`z3$$, \
+$CellContext`x >= 0, $CellContext`y >= 0], {$CellContext`x, 0, 
+            5}, {$CellContext`y, 0, 5}], Null]}], 
+      "Specifications" :> {{{$CellContext`type$$, "Maximize", 
+          Style["Type", 12, Bold]}, {"Minimize", "Maximize"}}, Delimiter, 
+        Style[
+        "Constraint 1 (Blue)", 12, Bold], {{$CellContext`x1$$, 1, "x"}, -50, 
+         50, Appearance -> "Labeled"}, {{$CellContext`y1$$, 0, "y"}, -50, 50, 
+         Appearance -> "Labeled"}, {{$CellContext`z1$$, 2, "b"}, 0, 100, 
+         Appearance -> "Labeled"}, Delimiter, 
+        Style[
+        "Constraint 2 (Green)", 12, Bold], {{$CellContext`x2$$, 0, "x"}, -50, 
+         50, Appearance -> "Labeled"}, {{$CellContext`y2$$, 1, "y"}, -50, 50, 
+         Appearance -> "Labeled"}, {{$CellContext`z2$$, 3, "b"}, 0, 100, 
+         Appearance -> "Labeled"}, Delimiter, 
+        Style[
+        "Constraint 3 (Red)", 12, Bold], {{$CellContext`x3$$, 1, "x"}, -50, 
+         50, Appearance -> "Labeled"}, {{$CellContext`y3$$, 1, "y"}, -50, 50, 
+         Appearance -> "Labeled"}, {{$CellContext`z3$$, 4, "b"}, 0, 100, 
+         Appearance -> "Labeled"}, Delimiter, 
+        Style[
+        "Objective", 12, Bold], {{$CellContext`objx$$, 1, "x"}, -50, 50, 
+         Appearance -> "Labeled"}, {{$CellContext`objy$$, 6, "y"}, -50, 50, 
+         Appearance -> "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{692., {242., 248.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.614132845921721*^9, {3.614132995248633*^9, 3.6141330037597218`*^9}, 
+   3.614133093156639*^9, 3.6141331481695347`*^9, {3.6141338463830442`*^9, 
+   3.6141338753404293`*^9}, 3.614133909870899*^9, 3.614134020999711*^9, {
+   3.6141341557813787`*^9, 3.614134169424323*^9}, 3.6141342729168997`*^9, 
+   3.614134324186226*^9, 3.614135753963831*^9, 3.614196337755784*^9, {
+   3.6141964817298594`*^9, 3.614196555123674*^9}, 3.614196596337523*^9, 
+   3.6141966608915854`*^9, {3.614196867834053*^9, 3.6141968933245277`*^9}, 
+   3.614196988120863*^9, 3.614197163289876*^9, 3.614197342210534*^9, 
+   3.614222448694304*^9, {3.614222491724189*^9, 3.6142225246193933`*^9}}]
+}, Open  ]]
+},
+WindowSize->{909, 829},
+WindowMargins->{{Automatic, 235}, {Automatic, 41}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (June 27, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 13107, 297, 1049, "Input"],
+Cell[13690, 321, 8717, 157, 507, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
